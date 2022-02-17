@@ -4,5 +4,6 @@ class DiceController < ApplicationController
         @die2 = rand(1..6)
         @total = @die1 + @die2
         @name = params["name"]
+        #render "index.html.erb"
     end
 end

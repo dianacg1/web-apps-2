@@ -9,4 +9,15 @@ class CompaniesController < ApplicationController
     @company = Company.find(params["id"])
   end
 
+  def new
+    @company = Company.new
+  end
+
+  def create
+    #values = {name: "Amazon", city:"Seattle", state: "WA"}
+    @company = Company.new(params["company"])
+    @company.save
+    redirect_to "/companies"
+  end
+
 end
